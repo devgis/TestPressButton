@@ -32,27 +32,40 @@ namespace DEVGIS.Controls
             //this.MouseOverColor = MouseOverColor;
         }
 
+        protected override void OnMouseDown(MouseEventArgs mevent)
+        {
+            base.OnMouseDown(mevent);
+            //this.BackColor = NotFocusedColor;
+            //this.FlatStyle = FlatStyle.Standard;
+            //this.Refresh();
+        }
+
+        protected override void OnMouseUp(MouseEventArgs mevent)
+        {
+            base.OnMouseUp(mevent);
+        }
+
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
-            this.BackColor = NotFocusedColor;
-            this.FlatStyle = FlatStyle.Standard;
-            this.Refresh();
+            //this.BackColor = NotFocusedColor;
+            //this.FlatStyle = FlatStyle.Standard;
+            //this.Refresh();
             
         }
 
-        protected override void OnGotFocus(EventArgs e)
-        {
-            base.OnGotFocus(e);
-            this.FlatStyle = FlatStyle.Flat;
-            this.BackColor = FocusedColor;
-        }
+        //protected override void OnGotFocus(EventArgs e)
+        //{
+        //    base.OnGotFocus(e);
+        //    this.FlatStyle = FlatStyle.Flat;
+        //    this.BackColor = FocusedColor;
+        //}
 
-        protected override void OnLostFocus(EventArgs e)
-        {
-            base.OnLostFocus(e);
-            this.FlatStyle = FlatStyle.Standard;
-            this.BackColor = NotFocusedColor;
-        }
+        //protected override void OnLostFocus(EventArgs e)
+        //{
+        //    base.OnLostFocus(e);
+        //    this.FlatStyle = FlatStyle.Standard;
+        //    this.BackColor = NotFocusedColor;
+        //}
     }
 }
